@@ -1,21 +1,25 @@
 {
-  "name": "note-taking",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "12.8.1",
-      "onFail": "download"
-    }
-  },
-  "packageManager": "pnpm@12.8.1",
-  "type": "module"
+	"name": "note-taking",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"backend:db:up": "pnpm --filter backend run db:up",
+		"backend:db:down": "pnpm --filter backend run db:down",
+		"backend:db:generate": "pnpm --filter backend exec zen generate",
+		"backend:db:reset": "pnpm --filter backend exec zen migrate reset --force",
+		"backend:db:migrate:dev": "pnpm --filter backend exec zen migrate dev",
+		"backend:db:migrate:deploy": "pnpm --filter backend exec zen migrate deploy",
+		"backend:db:studio": "pnpm --filter backend exec zen studio",
+		"backend:db:format": "pnpm --filter backend exec zen format"
+	},
+	"license": "ISC",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "12.8.1",
+			"onFail": "download"
+		}
+	},
+	"packageManager": "pnpm@12.8.1",
+	"type": "module"
 }
