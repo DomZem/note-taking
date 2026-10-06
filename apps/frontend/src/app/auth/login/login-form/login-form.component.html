@@ -1,0 +1,39 @@
+<form class="flex flex-col gap-4" (submit)="onSubmit($event)">
+  <div appFormField>
+    <label appLabel for="email">email address</label>
+    <input
+      appInput
+      class=""
+      id="email"
+      type="text"
+      placeholder="email@example.com"
+      [formField]="loginForm.email"
+      [error]="!!emailError()"
+    />
+
+    @if (emailError()) {
+      <app-form-error [message]="emailError()!" />
+    }
+  </div>
+
+  <div appFormField>
+    <div class="flex items-center justify-between">
+      <label appLabel for="password">password</label>
+      <a class="underline text-xs cursor-pointer" routerLink="/auth/forgot-password">Forgot</a>
+    </div>
+
+    <input
+      appInput
+      id="password"
+      type="password"
+      [formField]="loginForm.password"
+      [error]="!!passwordError()"
+    />
+
+    @if (passwordError()) {
+      <app-form-error [message]="passwordError()!" />
+    }
+  </div>
+
+  <button appButton type="submit">Login</button>
+</form>

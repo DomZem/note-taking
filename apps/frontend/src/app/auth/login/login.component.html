@@ -1,0 +1,25 @@
+<app-auth-view>
+  <div appCard>
+    <app-logo />
+
+    <div class="flex flex-col gap-2 items-center">
+      <h2 appTextPreset1>Welcome to Note</h2>
+      <p>Please log in to continue</p>
+    </div>
+
+    <app-login-form />
+
+    <span appSeparator></span>
+
+    <p class="mt-2">Or log in with:</p>
+
+    <button class="w-full" type="button" appButton variant="border">
+      <img src="/google.svg" alt="google" />
+      Google
+    </button>
+
+    <span appSeparator></span>
+
+    <p>No account yet? <a class="text-neutral-950" routerLink="/auth/sign-up">Sign up</a></p>
+  </div>
+</app-auth-view>
