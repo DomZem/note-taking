@@ -3,12 +3,12 @@
     <app-logo />
 
     <div class="flex flex-col gap-2 items-center">
-      <h2 appTextPreset1>Welcome to Note</h2>
-      <p>Please log in to continue</p>
+      <h2 class="capitalize" appTextPreset1>create your account</h2>
+      <p>Sign up to start organizing your notes and boost your productivity.</p>
     </div>
 
     <div class="pt-6 w-full">
-      <app-login-form />
+      <app-sign-up-form />
     </div>
 
     <span appSeparator></span>
@@ -22,6 +22,6 @@
 
     <span appSeparator></span>
 
-    <p>No account yet? <a class="text-neutral-950" routerLink="/auth/sign-up">Sign up</a></p>
+    <p>Already have an account? <a class="text-neutral-950" routerLink="/auth/login">Login</a></p>
   </div>
 </app-auth-view>

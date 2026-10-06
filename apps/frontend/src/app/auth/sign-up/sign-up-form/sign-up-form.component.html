@@ -1,0 +1,51 @@
+<form class="flex flex-col gap-4" (submit)="onSubmit($event)">
+  <div appFormField>
+    <label appLabel for="email">email address</label>
+    <input
+      appInput
+      id="email"
+      type="text"
+      placeholder="email@example.com"
+      [formField]="signUpForm.email"
+      [error]="!!emailError()"
+    />
+
+    @if (emailError()) {
+      <app-form-error [message]="emailError()!" />
+    }
+  </div>
+
+  <div appFormField>
+    <label appLabel for="password">password</label>
+
+    <input
+      appInput
+      id="password"
+      type="password"
+      [formField]="signUpForm.password"
+      [error]="!!passwordError()"
+    />
+
+    @if (passwordError()) {
+      <app-form-error [message]="passwordError()!" />
+    }
+  </div>
+
+  <div appFormField>
+    <label appLabel for="confirm-password">confirm password</label>
+
+    <input
+      appInput
+      id="confirm-password"
+      type="password"
+      [formField]="signUpForm.confirmPassword"
+      [error]="!!confirmPasswordError()"
+    />
+
+    @if (confirmPasswordError()) {
+      <app-form-error [message]="confirmPasswordError()!" />
+    }
+  </div>
+
+  <button appButton type="submit">Sign up</button>
+</form>

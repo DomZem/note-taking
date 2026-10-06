@@ -25,9 +25,6 @@ interface LoginData {
   ],
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
-  host: {
-    class: 'w-full',
-  },
 })
 export class LoginFormComponent {
   loginModel = signal<LoginData>({
