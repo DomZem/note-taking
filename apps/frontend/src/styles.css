@@ -1,3 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
+
+@theme inline {
+  --font-inter: 'Inter', sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-heading: var(--heading);
+  --color-lable: var(--lable);
+  --color-separator: var(--separator);
+
+  --color-neutral-950: #0a0a0a;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(96.9% 0.005 258.3); /* DONE */
+  --foreground: oklch(46% 0.024 267); /* DONE #525866 neutral-600 */
+
+  --card: oklch(100% 0 0) /* DONE #FFFFFF */;
+  --card-foreground: oklch(0.145 0 0);
+
+  --primary: oklch(55.502% 0.24497 266.696); /* DONE #335CFF */
+  --primary-foreground: oklch(100% 0 0); /* DONE  #FFFFFF */
+  --primary-hover: oklch(47.1% 0.213 266.5); /* DONE #2547D0 */
+
+  --secondary: oklch(96.9% 0.005 258.3); /* DONE #F3F5F8 neutral-100 */
+  --secondary-foreground: oklch(46% 0.024 267) /* DONE #525866 neutral-600 */;
+
+  --destructive: oklch(64.7% 0.229 22.5); /* DONE #FB3748 */
+  --destructive-foreground: oklch(100% 0 0); /* DONE #FFFFFF */
+
+  --border: oklch(85.3% 0.014 262.4); /* DONE #CACFD8 neutral-300 */
+  --input: oklch(100% 0 0); /* DONE #FFFFFF */
+  --ring: oklch(0.708 0 0);
+  --heading: oklch(18.3% 0.02 265.9);
+  --lable: oklch(18.3% 0.02 265.9);
+  --separator: oklch(91.8% 0.009 258.3); /* DONE #E0E4EA */
+
+  --neutral-950: oklch(18.3% 0.02 265.9); /* DONE #0E121B */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background font-inter text-foreground text-sm/tight;
+  }
+}
